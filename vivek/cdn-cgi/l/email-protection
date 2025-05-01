@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Email</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const emailElement = document.getElementById("email-protection");
+            const email = emailElement.getAttribute("data-user") + "@" + emailElement.getAttribute("data-domain");
+            emailElement.textContent = email;
+            emailElement.href = "mailto:" + email;
+        });
+    </script>
+</head>
+<body>
+    <a id="email-protection" data-user="example" data-domain="domain.com">[email protected]</a>
+</body>
+</html>
